@@ -568,11 +568,13 @@ export interface NewsletterSubmitProps {
 
 export interface DesktopNavigationProps {
   copy: Dictionary;
+  categories: Category[];
   closeMobileMenu: () => void;
 }
 
 export interface MobileNavigationProps {
   copy: Dictionary;
+  categories: Category[];
   wishlistCount: number;
   cartCount: number;
   onClose: () => void;

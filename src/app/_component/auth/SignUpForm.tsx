@@ -162,7 +162,7 @@ export default function SignUpForm({ callbackUrl }: AuthFormPageProps) {
               className="flex w-full items-center justify-center gap-4 rounded-xl border-2 border-gray-200 bg-white px-5 py-4 text-base font-medium text-gray-800 transition-all duration-200 hover:border-gray-300 hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-100"
             >
               <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#1877F2]">
-                <FaFacebookF className="text-[10px] text-white" />
+                <FaFacebookF className="facebook-icon text-[10px] text-white" />
               </span>
 
               <span>{t.facebook}</span>
