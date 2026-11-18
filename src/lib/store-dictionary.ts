@@ -1,0 +1,14 @@
+import type { Locale, StoreDictionary } from "@/app/_types";
+
+const storeCopy: Record<Locale, StoreDictionary> = {
+  en: {
+    cartTitle: "Shopping Cart", wishlistTitle: "My Wishlist", emptyCartTitle: "Your cart is empty", emptyCartText: "Looks like you haven't added anything to your cart yet. Start exploring our products!", emptyWishlistTitle: "Your wishlist is empty", emptyWishlistText: "Browse products and save your favorites here.", startShopping: "Start Shopping", browseProducts: "Browse Products", signIn: "Sign In", itemsInCart: "items in your cart", savedItems: "items saved", orderSummary: "Order Summary", subtotal: "Subtotal", shipping: "Shipping", calculatedAtCheckout: "Calculated at checkout", estimatedTotal: "Estimated Total", checkout: "Login to Checkout", signUp: "Sign up", savedCartNote: "Your cart items will be saved", remove: "Remove", clearCart: "Clear all items", continueShopping: "Continue Shopping", quantity: "Quantity", inStock: "In Stock", addToCart: "Add to Cart", viewCart: "View Cart", retry: "Try Again", brandsTitle: "Top Brands", brandsSubtitle: "Shop from your favorite brands", shopBrand: "Shop products", noBrands: "No brands are available right now.", noBrandProducts: "There are no products from this brand yet.", loading: "Loading...", error: "We couldn't load this page. Please try again.", price: "Price", total: "Total", item: "item", items: "items", signInToSync: "Sign in to sync your wishlist across devices.",
+  },
+  ar: {
+    cartTitle: "سلة التسوق", wishlistTitle: "مفضلتي", emptyCartTitle: "سلتك فارغة", emptyCartText: "لم تضف أي منتجات إلى سلتك بعد. ابدأ بتصفح منتجاتنا!", emptyWishlistTitle: "قائمة المفضلة فارغة", emptyWishlistText: "تصفح المنتجات واحفظ ما يعجبك هنا.", startShopping: "ابدأ التسوق", browseProducts: "تصفح المنتجات", signIn: "تسجيل الدخول", itemsInCart: "منتجات في السلة", savedItems: "منتجات محفوظة", orderSummary: "ملخص الطلب", subtotal: "المجموع الفرعي", shipping: "الشحن", calculatedAtCheckout: "يُحسب عند إتمام الشراء", estimatedTotal: "الإجمالي التقديري", checkout: "سجل الدخول لإتمام الشراء", signUp: "إنشاء حساب", savedCartNote: "سيتم حفظ منتجات سلتك", remove: "إزالة", clearCart: "إفراغ السلة", continueShopping: "متابعة التسوق", quantity: "الكمية", inStock: "متوفر", addToCart: "أضف إلى السلة", viewCart: "عرض السلة", retry: "حاول مرة أخرى", brandsTitle: "أفضل العلامات التجارية", brandsSubtitle: "تسوق من علاماتك التجارية المفضلة", shopBrand: "تسوق منتجات العلامة", noBrands: "لا توجد علامات تجارية متاحة حاليًا.", noBrandProducts: "لا توجد منتجات لهذه العلامة التجارية حاليًا.", loading: "جارٍ التحميل...", error: "تعذر تحميل الصفحة. حاول مرة أخرى.", price: "السعر", total: "الإجمالي", item: "منتج", items: "منتجات", signInToSync: "سجل الدخول لمزامنة مفضلتك عبر أجهزتك.",
+  },
+};
+
+export function getStoreDictionary(locale: Locale): StoreDictionary {
+  return storeCopy[locale];
+}
