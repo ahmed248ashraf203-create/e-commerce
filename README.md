@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Authentication environment variables
+
+Add these variables in **Vercel → Project → Settings → Environment Variables**, then redeploy:
+
+- `AUTH_SECRET`: a unique random secret for Production (do not reuse the local value). Generate one with `node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"`.
+- `AUTH_TRUST_HOST`: `true`.
+- `AUTH_URL`: `https://e-commerce-five-pink-80.vercel.app` for the Production environment.
+- `ROUTE_API_BASE_URL`: `https://ecommerce.routemisr.com/api`.
+
+`AUTH_SECRET` must be present in the Vercel environment used by the deployment. Without it, Auth.js returns its generic server configuration error at `/api/auth/error`. Keep secrets out of source control and do not prefix them with `NEXT_PUBLIC_`.

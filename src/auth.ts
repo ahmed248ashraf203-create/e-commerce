@@ -15,6 +15,9 @@ class FreshCartCredentialsError extends CredentialsSignin {
 
 export const { handlers, auth } = NextAuth({
   secret: process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET,
+  // Vercel terminates TLS at its edge and forwards requests to the function.
+  // Trust the forwarded host/protocol so Auth.js can build callback URLs correctly.
+  trustHost: true,
   session: { strategy: "jwt", maxAge: 60 * 60 * 24 * 7 },
   pages: { signIn: "/signin" },
   providers: [
